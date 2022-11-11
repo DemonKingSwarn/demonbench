@@ -54,5 +54,5 @@ case $input in
     -c) ./benchmarkers/geekbench_x86_64 --cpu ;;
     -a) ./benchmarkers/geekbench_x86_64 --compute CUDA ;;
     -e) ./benchmarkers/geekbench_x86_64 --compute Vulkan ;;
-    *) exit 1 ;;
+    *) printf "%s\n" "Invalid argument '$1'" && help && exit 1 ;;
 esac
